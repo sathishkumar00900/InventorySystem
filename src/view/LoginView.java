@@ -1,32 +1,18 @@
 package view;
 
-import model.User;
-
 import java.util.Scanner;
 
-public class LoginView {
-    private Scanner scanner = new Scanner(System.in);
+public class LoginView extends BaseView {
 
-    public int displayLoginSystem() {
+    Scanner sc = new Scanner(System.in);
 
-        System.out.println("  1.SignUp (If you're a new User)");
-        System.out.println("  2.SignIn (Have an account)");
-        System.out.println("Enter Your Choice");
-
-        int choice = scanner.nextInt();
-        return choice;
+    public String getUsername() {
+        System.out.print("Enter Username: ");
+        return sc.nextLine();
     }
-    public User getDetails() {
 
-        User user = new User();
-        System.out.println("Enter the username");
-        String username = scanner.next();
-        user.setUsername(username);
-
-        System.out.println("Enter the password");
-        String password = scanner.next();
-        user.setPassword(password);
-
-        return user;
+    public String getPassword() {
+        System.out.print("Enter Password: ");
+        return sc.nextLine();
     }
 }

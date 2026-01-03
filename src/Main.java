@@ -1,12 +1,10 @@
-import controller.LoginController;
-import view.BaseView;
+import controller.AuthController;
 
 public class Main {
     public static void main(String[] args) {
 
-        new BaseView().displayWelcome();
-        LoginController login = new LoginController();
+        AuthController auth = new AuthController();
+        auth.run();
 
-        login.run();
     }
 }
